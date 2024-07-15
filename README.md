@@ -35,9 +35,9 @@ For bigger changes, where you need a tighter feedback loop, you can clone the re
 and use the [`live_compile.py`](live_compile.py) script to get the updated preview
 after changing the relevant files.
 
-When working locally, you may need to provide a `CHROME` variable, which represents
-the command used for running the browser to generate the PDF. It defaults to
-`chrome`, which is what I use on my machine.
+When working locally, you may need to provide a `CHROME` environment variable,
+which represents the command used for running the browser to generate the PDF.
+It defaults to `chrome`, which is what I use on my machine.
 
 ## FAQ
 
