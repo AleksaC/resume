@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.28.5
+    hooks:
+      - id: check-github-workflows
+
+  - repo: https://github.com/errata-ai/vale
+    rev: v3.5.0
+    hooks:
+      - id: vale
+        types_or:
+          - markdown

@@ -1,0 +1,65 @@
+name: Preview
+
+on:
+  push:
+    paths:
+      - "resume.md"
+      - "style.css"
+      - Makefile
+      - ".github/workflows/preview.yml"
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "resume.md"
+      - "style.css"
+      - Makefile
+      - ".github/workflows/preview.yml"
+    branches:
+      - main
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  render-preview:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install deps
+        run: |
+          wget -qO /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/3.2.1/pandoc-3.2.1-1-amd64.deb
+          sudo apt update
+          sudo dpkg -i /tmp/pandoc.deb
+          sudo apt-get install chromium-browser imagemagick
+      - name: Generate pdf preview
+        env:
+          CHROME: chromium-browser
+        run: |
+          touch resume.md
+          make
+      - name: Generate png preview
+        run: |
+          sudo sed -i '/\<policy domain="coder" rights="none" pattern="PDF" \/>/d' /etc/ImageMagick-6/policy.xml
+          convert -density 250 -flatten resume.pdf -quality 100 resume.png
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: |
+            resume.pdf
+            resume.png
+        if: github.event_name == 'pull_request'
+      - name: Configure git
+        run: |
+          git config --global user.name 'Github Actions'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+        if: github.event_name != 'pull_request'
+      - name: Push changes
+        run: |
+          git add resume.pdf resume.png
+          git commit -m "Update resume.pdf [skip-ci]"
+          git push origin HEAD
+        if: github.event_name != 'pull_request'

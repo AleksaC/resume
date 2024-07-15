@@ -1,0 +1,15 @@
+Coinis
+Vercel
+(?i)Serverless
+Ansible
+netboxify
+Crnogorski
+Telekom
+jQuery
+Ansible
+Grafana
+repo
+(?i)png
+(?i)pdf
+(?i)html
+pandoc
