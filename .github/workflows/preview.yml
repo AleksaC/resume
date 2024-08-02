@@ -65,7 +65,7 @@ jobs:
         if: github.event_name != 'pull_request'
       - name: Update aleksac.me version
         run: |
-          curl -X POST \
+          curl \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: Bearer $GH_PAT" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
