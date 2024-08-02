@@ -12,7 +12,7 @@ website: [aleksac.me](https://aleksac.me)
 
 <div class="work-entry">
 ### Coinis - <span class="position">Senior DevOps Engineer</span>
-<div class="period">November 2021 - Present</div>
+<div class="period">November 2021 - August 2024</div>
 </div>
 
 - Lead a complete infrastructure overhaul including adoption of infrastructure as code, CI/CD pipelines and modern observability tools
