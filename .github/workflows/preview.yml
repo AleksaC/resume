@@ -64,6 +64,8 @@ jobs:
           git push origin HEAD
         if: github.event_name != 'pull_request'
       - name: Update aleksac.me version
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           curl \
             -H "Accept: application/vnd.github.v3+json" \
