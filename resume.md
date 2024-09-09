@@ -57,7 +57,7 @@ website: [aleksac.me](https://aleksac.me)
 
 **Programming Languages**: Primarily Python and TypeScript, looking to work more with Go and Rust
 
-**Tools, Platforms and Frameworks**: Kubernetes, AWS, Terraform, Ansible, React/Next.js, FastAPI, Prometheus, Grafana, Loki, ClickHouse, Snowflake
+**Tools, Platforms and Frameworks**: Kubernetes, AWS, Terraform, Ansible, ArgoCD, GitHub Actions, GitLab CI, Prometheus, Grafana, Loki, ClickHouse, Snowflake, React/Next.js, Astro, FastAPI
 
 ## Certificates
 
