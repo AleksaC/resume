@@ -25,7 +25,7 @@ website: [aleksac.me](https://aleksac.me)
 <div class="period">September 2020 - Present</div>
 </div>
 
-- Hired by iGEM foundation to set up live streaming for an event using AWS media services, translate and transcribe, with a simple dashboard for managing streams and a basic video player
+- Hired by iGEM foundation to set up live streaming for an event using AWS media services, translate and transcribe, with a simple dashboard for managing streams and a basic video player with viewer count
 - Built a job board with Next.js frontend, AppSync backend and React admin dashboard. Deployed using Serverless Framework and Vercel
 - Built an e-commerce website using Next.js with infrastructure provisioned through Serverless Framework and deployed using GitHub Actions
 - Built and maintain a local news website made with Next.js with infra managed using Terraform, Ansible and GitHub Actions
@@ -55,9 +55,9 @@ website: [aleksac.me](https://aleksac.me)
 
 ## Skills
 
-**Programming Languages**: Primarily Python and TypeScript, looking to work more with Go and Rust
+**Programming Languages**: Python, TypeScript, Go
 
-**Tools, Platforms and Frameworks**: Kubernetes, AWS, Terraform, Ansible, ArgoCD, GitHub Actions, GitLab CI, Prometheus, Grafana, Loki, ClickHouse, Snowflake, React/Next.js, Astro, FastAPI
+**Tools, Platforms and Frameworks**: Kubernetes, AWS, Terraform, Ansible, ArgoCD, GitHub Actions, GitLab CI, OpenTelemetry, Prometheus, Grafana, Loki, ClickHouse, Snowflake, React/Next.js, Astro, FastAPI
 
 ## Certificates
 
